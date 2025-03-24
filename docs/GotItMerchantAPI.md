@@ -1,6 +1,6 @@
 # \GotItMerchantAPI
 
-All URIs are relative to *https://merchant-api-test.gotit.vn*
+All URIs are relative to *https://merchant-api-stg.gotit.vn*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

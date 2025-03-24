@@ -74,7 +74,7 @@ ctx = context.WithValue(context.Background(), gotit_merchant_apis.ContextOperati
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://merchant-api-test.gotit.vn*
+All URIs are relative to *https://merchant-api-stg.gotit.vn*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------

@@ -91,7 +91,7 @@ func NewConfiguration() *Configuration {
 		Debug:            false,
 		Servers:          ServerConfigurations{
 			{
-				URL: "https://merchant-api-test.gotit.vn",
+				URL: "https://merchant-api-stg.gotit.vn",
 				Description: "Merchant APIs Staging",
 			},
 		},
