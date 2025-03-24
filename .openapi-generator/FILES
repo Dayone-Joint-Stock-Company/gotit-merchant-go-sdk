@@ -1,5 +1,4 @@
 .gitignore
-.openapi-generator-ignore
 .travis.yml
 README.md
 api/openapi.yaml
@@ -53,5 +52,4 @@ model_response_reserved_schema_used_store.go
 model_response_un_reserved_schema.go
 model_response_un_reserved_schema_data_inner.go
 response.go
-test/api_got_it_merchant_test.go
 utils.go

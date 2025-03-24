@@ -14,7 +14,7 @@
     <execution />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/bin/php" />
   <component name="ProjectColorInfo">{
@@ -29,7 +29,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/manhnguyen/projects/my-first-app",
+    "last_opened_file_path": "/home/manhnguyen/projects/gotit-merchant-go-sdk",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -56,6 +56,7 @@
       <updated>1742785170981</updated>
       <workItem from="1742785172031" duration="2809000" />
       <workItem from="1742791154441" duration="596000" />
+      <workItem from="1742791885024" duration="1755000" />
     </task>
     <servers />
   </component>
