@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e34bf6b4-71f9-4b63-96e7-c5e448c77c1c" name="Changes" comment="">
+    <list default="true" id="e34bf6b4-71f9-4b63-96e7-c5e448c77c1c" name="Changes" comment="GO: Update Unit test for SDK">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/openapi.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api/openapi.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ResponseReservedSchemaDataInner.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ResponseReservedSchemaDataInner.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_response_reserved_schema_data_inner.go" beforeDir="false" afterPath="$PROJECT_DIR$/model_response_reserved_schema_data_inner.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/api_got_it_merchant_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/api_got_it_merchant_test.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,21 +32,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/manhnguyen/projects/gotit-merchant-go-sdk",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/manhnguyen/projects/openapi-generator&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -58,10 +60,24 @@
       <workItem from="1742791885024" duration="1755000" />
       <workItem from="1742801511981" duration="559000" />
       <workItem from="1742803031349" duration="371000" />
+      <workItem from="1742898372735" duration="4875000" />
     </task>
+    <task id="LOCAL-00001" summary="GO: Update Unit test for SDK">
+      <option name="closed" value="true" />
+      <created>1742900188044</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1742900188044</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="GO: Update Unit test for SDK" />
+    <option name="LAST_COMMIT_MESSAGE" value="GO: Update Unit test for SDK" />
   </component>
 </project>

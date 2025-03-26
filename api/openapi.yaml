@@ -487,6 +487,7 @@ components:
               price: 100000
               sku: SKU001
           voucher_type: conditional
+          state: 1
           conditions:
             redeemable_skus:
             - SKU001
@@ -503,6 +504,7 @@ components:
               price: 100000
               sku: SKU001
           voucher_type: conditional
+          state: 1
           conditions:
             redeemable_skus:
             - SKU001
@@ -928,6 +930,7 @@ components:
             price: 100000
             sku: SKU001
         voucher_type: conditional
+        state: 1
         conditions:
           redeemable_skus:
           - SKU001
@@ -941,6 +944,11 @@ components:
         value:
           description: Value of voucher
           example: 100000
+          nullable: true
+          type: integer
+        state:
+          description: State of voucher
+          example: 1
           nullable: true
           type: integer
         voucher_type:

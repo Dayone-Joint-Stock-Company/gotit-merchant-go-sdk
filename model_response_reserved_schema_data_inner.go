@@ -24,6 +24,8 @@ type ResponseReservedSchemaDataInner struct {
 	Code *string `json:"code,omitempty"`
 	// Value of voucher
 	Value NullableInt32 `json:"value,omitempty"`
+	// State of voucher
+	State NullableInt32 `json:"state,omitempty"`
 	// Voucher type, standard or conditional
 	VoucherType *string `json:"voucher_type,omitempty"`
 	Conditions *ResponseMarkUseMultipleSchemaDataInnerConditions `json:"conditions,omitempty"`
@@ -119,6 +121,48 @@ func (o *ResponseReservedSchemaDataInner) SetValueNil() {
 // UnsetValue ensures that no value is present for Value, not even an explicit nil
 func (o *ResponseReservedSchemaDataInner) UnsetValue() {
 	o.Value.Unset()
+}
+
+// GetState returns the State field value if set, zero value otherwise (both if not set or set to explicit null).
+func (o *ResponseReservedSchemaDataInner) GetState() int32 {
+	if o == nil || IsNil(o.State.Get()) {
+		var ret int32
+		return ret
+	}
+	return *o.State.Get()
+}
+
+// GetStateOk returns a tuple with the State field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
+func (o *ResponseReservedSchemaDataInner) GetStateOk() (*int32, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return o.State.Get(), o.State.IsSet()
+}
+
+// HasState returns a boolean if a field has been set.
+func (o *ResponseReservedSchemaDataInner) HasState() bool {
+	if o != nil && o.State.IsSet() {
+		return true
+	}
+
+	return false
+}
+
+// SetState gets a reference to the given NullableInt32 and assigns it to the State field.
+func (o *ResponseReservedSchemaDataInner) SetState(v int32) {
+	o.State.Set(&v)
+}
+// SetStateNil sets the value for State to be an explicit nil
+func (o *ResponseReservedSchemaDataInner) SetStateNil() {
+	o.State.Set(nil)
+}
+
+// UnsetState ensures that no value is present for State, not even an explicit nil
+func (o *ResponseReservedSchemaDataInner) UnsetState() {
+	o.State.Unset()
 }
 
 // GetVoucherType returns the VoucherType field value if set, zero value otherwise.
@@ -232,6 +276,9 @@ func (o ResponseReservedSchemaDataInner) ToMap() (map[string]interface{}, error)
 	}
 	if o.Value.IsSet() {
 		toSerialize["value"] = o.Value.Get()
+	}
+	if o.State.IsSet() {
+		toSerialize["state"] = o.State.Get()
 	}
 	if !IsNil(o.VoucherType) {
 		toSerialize["voucher_type"] = o.VoucherType

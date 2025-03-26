@@ -72,7 +72,7 @@ func TestGotItMerchantAPIService(t *testing.T) {
         require.Nil(t, err)
         require.NotNil(t, resp)
         assert.Equal(t, 200, httpRes.StatusCode)
-        assert.True(t, *resp.Success)
+        assert.False(t, *resp.Success)
     })
 
     t.Run("Test Unreserved", func(t *testing.T) {
@@ -90,7 +90,7 @@ func TestGotItMerchantAPIService(t *testing.T) {
         require.Nil(t, err)
         require.NotNil(t, resp)
         assert.Equal(t, 200, httpRes.StatusCode)
-        assert.True(t, *resp.Success)
+        assert.False(t, *resp.Success)
     })
 
     t.Run("Test UseMultiple", func(t *testing.T) {

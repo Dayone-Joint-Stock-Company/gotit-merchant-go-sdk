@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** | Voucher code | [optional] 
 **Value** | Pointer to **NullableInt32** | Value of voucher | [optional] 
+**State** | Pointer to **NullableInt32** | State of voucher | [optional] 
 **VoucherType** | Pointer to **string** | Voucher type, standard or conditional | [optional] 
 **Conditions** | Pointer to [**ResponseMarkUseMultipleSchemaDataInnerConditions**](ResponseMarkUseMultipleSchemaDataInnerConditions.md) |  | [optional] 
 **Redemptions** | Pointer to [**ResponseReservedSchemaDataInnerRedemptions**](ResponseReservedSchemaDataInnerRedemptions.md) |  | [optional] 
@@ -89,6 +90,41 @@ HasValue returns a boolean if a field has been set.
 `func (o *ResponseReservedSchemaDataInner) UnsetValue()`
 
 UnsetValue ensures that no value is present for Value, not even an explicit nil
+### GetState
+
+`func (o *ResponseReservedSchemaDataInner) GetState() int32`
+
+GetState returns the State field if non-nil, zero value otherwise.
+
+### GetStateOk
+
+`func (o *ResponseReservedSchemaDataInner) GetStateOk() (*int32, bool)`
+
+GetStateOk returns a tuple with the State field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetState
+
+`func (o *ResponseReservedSchemaDataInner) SetState(v int32)`
+
+SetState sets State field to given value.
+
+### HasState
+
+`func (o *ResponseReservedSchemaDataInner) HasState() bool`
+
+HasState returns a boolean if a field has been set.
+
+### SetStateNil
+
+`func (o *ResponseReservedSchemaDataInner) SetStateNil(b bool)`
+
+ SetStateNil sets the value for State to be an explicit nil
+
+### UnsetState
+`func (o *ResponseReservedSchemaDataInner) UnsetState()`
+
+UnsetState ensures that no value is present for State, not even an explicit nil
 ### GetVoucherType
 
 `func (o *ResponseReservedSchemaDataInner) GetVoucherType() string`
