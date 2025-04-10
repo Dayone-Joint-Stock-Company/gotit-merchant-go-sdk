@@ -6,13 +6,13 @@ info:
   title: Merchant APIs
   version: "6.0"
 servers:
-- description: Merchant APIs Staging
-  url: https://merchant-api-stg.gotit.vn
+- description: Merchant APIs Staging use open api domain
+  url: https://openapi-stg.gotit.vn
 tags:
 - description: GotItMerchant
   name: GotItMerchant
 paths:
-  /api/v6.0/checkmultiple:
+  /merchant/v6.0/checkmultiple:
     post:
       description: Check multiple vouchers are valid or not
       operationId: checkMultiple
@@ -33,7 +33,7 @@ paths:
       summary: Check multiple vouchers are valid or not
       tags:
       - GotItMerchant
-  /api/v6.0/reserved:
+  /merchant/v6.0/reserved:
     post:
       description: Reserved multiple vouchers for a fixed bill number.
       operationId: reserved
@@ -54,7 +54,7 @@ paths:
       summary: Reserved multiple vouchers for a fixed bill number.
       tags:
       - GotItMerchant
-  /api/v6.0/unreserved:
+  /merchant/v6.0/unreserved:
     post:
       description: Reserved multiple vouchers for a fixed bill number.
       operationId: unreserved
@@ -75,7 +75,7 @@ paths:
       summary: Reserved multiple vouchers for a fixed bill number.
       tags:
       - GotItMerchant
-  /api/v6.0/usemultiple:
+  /merchant/v6.0/usemultiple:
     post:
       description: Reserved multiple vouchers for a fixed bill number.
       operationId: useMultiple

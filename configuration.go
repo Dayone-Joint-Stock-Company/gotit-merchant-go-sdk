@@ -87,11 +87,11 @@ type Configuration struct {
 func NewConfiguration() *Configuration {
 	cfg := &Configuration{
 		DefaultHeader:    make(map[string]string),
-		UserAgent:        "OpenAPI-Generator/1.0.0/go",
+		UserAgent:        "Merchant-Api-Client/1.0.0/go",
 		Debug:            false,
 		Servers:          ServerConfigurations{
 			{
-				URL: "https://merchant-api-stg.gotit.vn",
+				URL: "https://openapi-stg.gotit.vn",
 				Description: "Merchant APIs Staging",
 			},
 		},

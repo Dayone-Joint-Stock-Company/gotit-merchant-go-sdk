@@ -6,18 +6,18 @@ import (
 
     "github.com/stretchr/testify/assert"
     "github.com/stretchr/testify/require"
-    openapiclient "gitlab.gotit.vn/manh.nguyen/gotit-merchant-go-sdk.git"
+    merchantApiClient "github.com/Dayone-Joint-Stock-Company/gotit-merchant-go-sdk"
 )
 
 func TestGotItMerchantAPIService(t *testing.T) {
-    configuration := openapiclient.NewConfiguration()
-    configuration.Servers = openapiclient.ServerConfigurations{
+    configuration := merchantApiClient.NewConfiguration()
+    configuration.Servers = merchantApiClient.ServerConfigurations{
         {
-            URL: "https://merchant-api-stg.gotit.vn",
+            URL: "https://openapi-stg.gotit.vn",
             Description: "Merchant APIs Staging",
         },
     }
-    apiClient := openapiclient.NewAPIClient(configuration)
+    apiClient := merchantApiClient.NewAPIClient(configuration)
 
     t.Run("Test CheckMultiple", func(t *testing.T) {
         pin := "4205"
@@ -29,11 +29,11 @@ func TestGotItMerchantAPIService(t *testing.T) {
         quantity2 := int32(3)
         price2 := int32(100000)
 
-        body := openapiclient.RequestCheckMultipleBodySchema{
+        body := merchantApiClient.RequestCheckMultipleBodySchema{
             Pin:        &pin,
             Codes:      []string{"071717127083"},
             BillNumber: &billNumber,
-            SkusInfo: []openapiclient.RequestCheckMultipleBodySchemaSkusInfoInner{
+            SkusInfo: []merchantApiClient.RequestCheckMultipleBodySchemaSkusInfoInner{
                 {Sku: &sku1, Quantity: &quantity1, Price: &price1},
                 {Sku: &sku2, Quantity: &quantity2, Price: &price2},
             },
@@ -57,11 +57,11 @@ func TestGotItMerchantAPIService(t *testing.T) {
         quantity2 := int32(3)
         price2 := int32(100000)
 
-        body := openapiclient.RequestReservedBodySchema{
+        body := merchantApiClient.RequestReservedBodySchema{
             Pin:        &pin,
             Codes:      []string{"071717127083"},
             BillNumber: &billNumber,
-            SkusInfo: []openapiclient.RequestCheckMultipleBodySchemaSkusInfoInner{
+            SkusInfo: []merchantApiClient.RequestCheckMultipleBodySchemaSkusInfoInner{
                 {Sku: &sku1, Quantity: &quantity1, Price: &price1},
                 {Sku: &sku2, Quantity: &quantity2, Price: &price2},
             },
@@ -79,7 +79,7 @@ func TestGotItMerchantAPIService(t *testing.T) {
         pin := "4205"
         billNumber := "BILL071717127083"
 
-        body := openapiclient.RequestUnReservedBodySchema{
+        body := merchantApiClient.RequestUnReservedBodySchema{
             Pin:        &pin,
             Codes:      []string{"071717127083"},
             BillNumber: &billNumber,
@@ -103,11 +103,11 @@ func TestGotItMerchantAPIService(t *testing.T) {
         quantity2 := int32(3)
         price2 := int32(100000)
 
-        body := openapiclient.RequestMarkUseMultipleBodySchema{
+        body := merchantApiClient.RequestMarkUseMultipleBodySchema{
             Pin:        &pin,
             Codes:      []string{"071717127083"},
             BillNumber: &billNumber,
-            SkusInfo: []openapiclient.RequestCheckMultipleBodySchemaSkusInfoInner{
+            SkusInfo: []merchantApiClient.RequestCheckMultipleBodySchemaSkusInfoInner{
                 {Sku: &sku1, Quantity: &quantity1, Price: &price1},
                 {Sku: &sku2, Quantity: &quantity2, Price: &price2},
             },

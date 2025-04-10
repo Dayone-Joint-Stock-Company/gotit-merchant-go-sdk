@@ -68,7 +68,7 @@ func (a *GotItMerchantAPIService) CheckMultipleExecute(r ApiCheckMultipleRequest
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/api/v6.0/checkmultiple"
+	localVarPath := localBasePath + "/merchant/v6.0/checkmultiple"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -175,7 +175,7 @@ func (a *GotItMerchantAPIService) ReservedExecute(r ApiReservedRequest) (*Respon
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/api/v6.0/reserved"
+	localVarPath := localBasePath + "/merchant/v6.0/reserved"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -282,7 +282,7 @@ func (a *GotItMerchantAPIService) UnreservedExecute(r ApiUnreservedRequest) (*Re
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/api/v6.0/unreserved"
+	localVarPath := localBasePath + "/merchant/v6.0/unreserved"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -389,7 +389,7 @@ func (a *GotItMerchantAPIService) UseMultipleExecute(r ApiUseMultipleRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/api/v6.0/usemultiple"
+	localVarPath := localBasePath + "/merchant/v6.0/usemultiple"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}

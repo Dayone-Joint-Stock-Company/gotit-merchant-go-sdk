@@ -6,11 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="e34bf6b4-71f9-4b63-96e7-c5e448c77c1c" name="Changes" comment="GO: Update Unit test for SDK">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/openapi.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api/openapi.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_got_it_merchant.go" beforeDir="false" afterPath="$PROJECT_DIR$/api_got_it_merchant.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuration.go" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/GotItMerchantAPI.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/GotItMerchantAPI.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ResponseReservedSchemaDataInner.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ResponseReservedSchemaDataInner.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model_response_reserved_schema_data_inner.go" beforeDir="false" afterPath="$PROJECT_DIR$/model_response_reserved_schema_data_inner.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/api_got_it_merchant_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/api_got_it_merchant_test.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +51,14 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-PS-243.26053.13" />
+        <option value="bundled-php-predefined-a98d8de5180a-1ec7b7818973-com.jetbrains.php.sharedIndexes-PS-243.26053.13" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -61,6 +73,9 @@
       <workItem from="1742801511981" duration="559000" />
       <workItem from="1742803031349" duration="371000" />
       <workItem from="1742898372735" duration="4875000" />
+      <workItem from="1742973250160" duration="1519000" />
+      <workItem from="1744105053557" duration="1094000" />
+      <workItem from="1744251243717" duration="466000" />
     </task>
     <task id="LOCAL-00001" summary="GO: Update Unit test for SDK">
       <option name="closed" value="true" />
@@ -70,7 +85,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742900188044</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="GO: Update Unit test for SDK">
+      <option name="closed" value="true" />
+      <created>1742974742048</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1742974742048</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

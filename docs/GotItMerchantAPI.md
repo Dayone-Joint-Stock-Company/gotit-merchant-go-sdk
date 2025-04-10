@@ -1,13 +1,13 @@
 # \GotItMerchantAPI
 
-All URIs are relative to *https://merchant-api-stg.gotit.vn*
+All URIs are relative to *https://openapi-stg.gotit.vn*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CheckMultiple**](GotItMerchantAPI.md#CheckMultiple) | **Post** /api/v6.0/checkmultiple | Check multiple vouchers are valid or not
-[**Reserved**](GotItMerchantAPI.md#Reserved) | **Post** /api/v6.0/reserved | Reserved multiple vouchers for a fixed bill number.
-[**Unreserved**](GotItMerchantAPI.md#Unreserved) | **Post** /api/v6.0/unreserved | Reserved multiple vouchers for a fixed bill number.
-[**UseMultiple**](GotItMerchantAPI.md#UseMultiple) | **Post** /api/v6.0/usemultiple | Reserved multiple vouchers for a fixed bill number.
+[**CheckMultiple**](GotItMerchantAPI.md#CheckMultiple) | **Post** /merchant/v6.0/checkmultiple | Check multiple vouchers are valid or not
+[**Reserved**](GotItMerchantAPI.md#Reserved) | **Post** /merchant/v6.0/reserved | Reserved multiple vouchers for a fixed bill number.
+[**Unreserved**](GotItMerchantAPI.md#Unreserved) | **Post** /merchant/v6.0/unreserved | Reserved multiple vouchers for a fixed bill number.
+[**UseMultiple**](GotItMerchantAPI.md#UseMultiple) | **Post** /merchant/v6.0/usemultiple | Reserved multiple vouchers for a fixed bill number.
 
 
 
@@ -28,7 +28,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/Dayone-Joint-Stock-Company/gotit-merchant-go-sdk"
 )
 
 func main() {
@@ -94,7 +94,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/Dayone-Joint-Stock-Company/gotit-merchant-go-sdk"
 )
 
 func main() {
@@ -160,7 +160,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/Dayone-Joint-Stock-Company/gotit-merchant-go-sdk"
 )
 
 func main() {
@@ -226,7 +226,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/Dayone-Joint-Stock-Company/gotit-merchant-go-sdk"
 )
 
 func main() {
