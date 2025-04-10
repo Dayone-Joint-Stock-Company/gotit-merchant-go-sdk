@@ -6,7 +6,7 @@ import (
 
     "github.com/stretchr/testify/assert"
     "github.com/stretchr/testify/require"
-    merchantApiClient "github.com/Dayone-Joint-Stock-Company/gotit-merchant-go-sdk"
+    merchantApiClient "github.com/Dayone-Joint-Stock-Company/gotit-merchant-go-sdk/v1.0.0"
 )
 
 func TestGotItMerchantAPIService(t *testing.T) {
