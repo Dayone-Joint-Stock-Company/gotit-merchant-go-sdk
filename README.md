@@ -1,6 +1,6 @@
 # GotIt Merchant SDK
 
-Technical document APIs for Merchant APIs
+SDK Technical document for Merchant APIs
 
 ## Requirements
 Go 1.18 or later
@@ -46,15 +46,34 @@ func main() {
             Description: "Merchant APIs Staging",
         },
     }
+    apiClient := merchantApiClient.NewAPIClient(configuration)
 
-	apiClient := merchantApiClient.NewAPIClient(configuration)
-	resp, r, err := apiClient.GotItMerchantAPI.Reserved(context.Background()).RequestReservedBodySchema(requestReservedBodySchema).Execute()
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `GotItMerchantAPI.Reserved``: %v\n", err)
-		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-	}
-	// response from `Reserved`: ResponseReservedSchema
-	fmt.Fprintf(os.Stdout, "Response from `GotItMerchantAPI.Reserved`: %v\n", resp)
+    pin := "4205"
+    billNumber := "BILL071717127083"
+    sku1 := "3002275"
+    quantity1 := int32(2)
+    price1 := int32(100000)
+    sku2 := "3002980"
+    quantity2 := int32(3)
+    price2 := int32(100000)
+
+    body := merchantApiClient.RequestCheckMultipleBodySchema{
+        Pin:        &pin,
+        Codes:      []string{"071717127083"},
+        BillNumber: &billNumber,
+        SkusInfo: []merchantApiClient.RequestCheckMultipleBodySchemaSkusInfoInner{
+            {Sku: &sku1, Quantity: &quantity1, Price: &price1},
+            {Sku: &sku2, Quantity: &quantity2, Price: &price2},
+        },
+    }
+
+    resp, r, err := apiClient.GotItMerchantAPI.CheckMultiple(context.Background()).RequestCheckMultipleBodySchema(body).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `GotItMerchantAPI.CheckMultiple``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CheckMultiple`: ResponseCheckMultipleSchema
+    fmt.Fprintf(os.Stdout, "Response from `GotItMerchantAPI.CheckMultiple`: %v\n", resp)
 }
 ```
 
