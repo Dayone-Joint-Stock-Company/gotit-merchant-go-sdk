@@ -24,6 +24,8 @@ type ResponseCheckMultipleSchemaDataInner struct {
 	Code *string `json:"code,omitempty"`
 	// Value of voucher
 	Value NullableInt32 `json:"value,omitempty"`
+	// Product ID
+	ProductId NullableInt32 `json:"product_id,omitempty"`
 	// State of voucher
 	State NullableInt32 `json:"state,omitempty"`
 	// Voucher type, standard or conditional
@@ -125,6 +127,48 @@ func (o *ResponseCheckMultipleSchemaDataInner) SetValueNil() {
 // UnsetValue ensures that no value is present for Value, not even an explicit nil
 func (o *ResponseCheckMultipleSchemaDataInner) UnsetValue() {
 	o.Value.Unset()
+}
+
+// GetProductId returns the ProductId field value if set, zero value otherwise (both if not set or set to explicit null).
+func (o *ResponseCheckMultipleSchemaDataInner) GetProductId() int32 {
+	if o == nil || IsNil(o.ProductId.Get()) {
+		var ret int32
+		return ret
+	}
+	return *o.ProductId.Get()
+}
+
+// GetProductIdOk returns a tuple with the ProductId field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
+func (o *ResponseCheckMultipleSchemaDataInner) GetProductIdOk() (*int32, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return o.ProductId.Get(), o.ProductId.IsSet()
+}
+
+// HasProductId returns a boolean if a field has been set.
+func (o *ResponseCheckMultipleSchemaDataInner) HasProductId() bool {
+	if o != nil && o.ProductId.IsSet() {
+		return true
+	}
+
+	return false
+}
+
+// SetProductId gets a reference to the given NullableInt32 and assigns it to the ProductId field.
+func (o *ResponseCheckMultipleSchemaDataInner) SetProductId(v int32) {
+	o.ProductId.Set(&v)
+}
+// SetProductIdNil sets the value for ProductId to be an explicit nil
+func (o *ResponseCheckMultipleSchemaDataInner) SetProductIdNil() {
+	o.ProductId.Set(nil)
+}
+
+// UnsetProductId ensures that no value is present for ProductId, not even an explicit nil
+func (o *ResponseCheckMultipleSchemaDataInner) UnsetProductId() {
+	o.ProductId.Unset()
 }
 
 // GetState returns the State field value if set, zero value otherwise (both if not set or set to explicit null).
@@ -344,6 +388,9 @@ func (o ResponseCheckMultipleSchemaDataInner) ToMap() (map[string]interface{}, e
 	}
 	if o.Value.IsSet() {
 		toSerialize["value"] = o.Value.Get()
+	}
+	if o.ProductId.IsSet() {
+		toSerialize["product_id"] = o.ProductId.Get()
 	}
 	if o.State.IsSet() {
 		toSerialize["state"] = o.State.Get()

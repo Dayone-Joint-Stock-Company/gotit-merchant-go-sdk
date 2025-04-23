@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** | Voucher code | [optional] 
 **Value** | Pointer to **NullableInt32** | Value of voucher | [optional] 
+**ProductId** | Pointer to **NullableInt32** | Product ID | [optional] 
 **VoucherType** | Pointer to **string** | Voucher type, standard or conditional | [optional] 
 
 ## Methods
@@ -87,6 +88,41 @@ HasValue returns a boolean if a field has been set.
 `func (o *ResponseUnReservedSchemaDataInner) UnsetValue()`
 
 UnsetValue ensures that no value is present for Value, not even an explicit nil
+### GetProductId
+
+`func (o *ResponseUnReservedSchemaDataInner) GetProductId() int32`
+
+GetProductId returns the ProductId field if non-nil, zero value otherwise.
+
+### GetProductIdOk
+
+`func (o *ResponseUnReservedSchemaDataInner) GetProductIdOk() (*int32, bool)`
+
+GetProductIdOk returns a tuple with the ProductId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetProductId
+
+`func (o *ResponseUnReservedSchemaDataInner) SetProductId(v int32)`
+
+SetProductId sets ProductId field to given value.
+
+### HasProductId
+
+`func (o *ResponseUnReservedSchemaDataInner) HasProductId() bool`
+
+HasProductId returns a boolean if a field has been set.
+
+### SetProductIdNil
+
+`func (o *ResponseUnReservedSchemaDataInner) SetProductIdNil(b bool)`
+
+ SetProductIdNil sets the value for ProductId to be an explicit nil
+
+### UnsetProductId
+`func (o *ResponseUnReservedSchemaDataInner) UnsetProductId()`
+
+UnsetProductId ensures that no value is present for ProductId, not even an explicit nil
 ### GetVoucherType
 
 `func (o *ResponseUnReservedSchemaDataInner) GetVoucherType() string`

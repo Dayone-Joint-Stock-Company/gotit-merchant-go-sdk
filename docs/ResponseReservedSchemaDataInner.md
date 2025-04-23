@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **Code** | Pointer to **string** | Voucher code | [optional] 
 **Value** | Pointer to **NullableInt32** | Value of voucher | [optional] 
 **State** | Pointer to **NullableInt32** | State of voucher | [optional] 
+**ProductId** | Pointer to **NullableInt32** | Product ID | [optional] 
 **VoucherType** | Pointer to **string** | Voucher type, standard or conditional | [optional] 
 **Conditions** | Pointer to [**ResponseMarkUseMultipleSchemaDataInnerConditions**](ResponseMarkUseMultipleSchemaDataInnerConditions.md) |  | [optional] 
 **Redemptions** | Pointer to [**ResponseReservedSchemaDataInnerRedemptions**](ResponseReservedSchemaDataInnerRedemptions.md) |  | [optional] 
@@ -125,6 +126,41 @@ HasState returns a boolean if a field has been set.
 `func (o *ResponseReservedSchemaDataInner) UnsetState()`
 
 UnsetState ensures that no value is present for State, not even an explicit nil
+### GetProductId
+
+`func (o *ResponseReservedSchemaDataInner) GetProductId() int32`
+
+GetProductId returns the ProductId field if non-nil, zero value otherwise.
+
+### GetProductIdOk
+
+`func (o *ResponseReservedSchemaDataInner) GetProductIdOk() (*int32, bool)`
+
+GetProductIdOk returns a tuple with the ProductId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetProductId
+
+`func (o *ResponseReservedSchemaDataInner) SetProductId(v int32)`
+
+SetProductId sets ProductId field to given value.
+
+### HasProductId
+
+`func (o *ResponseReservedSchemaDataInner) HasProductId() bool`
+
+HasProductId returns a boolean if a field has been set.
+
+### SetProductIdNil
+
+`func (o *ResponseReservedSchemaDataInner) SetProductIdNil(b bool)`
+
+ SetProductIdNil sets the value for ProductId to be an explicit nil
+
+### UnsetProductId
+`func (o *ResponseReservedSchemaDataInner) UnsetProductId()`
+
+UnsetProductId ensures that no value is present for ProductId, not even an explicit nil
 ### GetVoucherType
 
 `func (o *ResponseReservedSchemaDataInner) GetVoucherType() string`

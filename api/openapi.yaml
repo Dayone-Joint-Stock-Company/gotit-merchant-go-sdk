@@ -309,6 +309,7 @@ components:
             - quantity: 1
               price: 100000
               sku: SKU001
+          product_id: 12345
           voucher_type: conditional
           expiry_date: 2025-12-26
           cancel_date: ""
@@ -340,6 +341,7 @@ components:
             - quantity: 1
               price: 100000
               sku: SKU001
+          product_id: 12345
           voucher_type: conditional
           expiry_date: 2025-12-26
           cancel_date: ""
@@ -404,6 +406,7 @@ components:
             - quantity: 1
               price: 100000
               sku: SKU001
+          product_id: 12345
           voucher_type: conditional
           state: 4
           conditions:
@@ -425,6 +428,7 @@ components:
             - quantity: 1
               price: 100000
               sku: SKU001
+          product_id: 12345
           voucher_type: conditional
           state: 4
           conditions:
@@ -486,6 +490,7 @@ components:
             - quantity: 1
               price: 100000
               sku: SKU001
+          product_id: 12345
           voucher_type: conditional
           state: 1
           conditions:
@@ -503,6 +508,7 @@ components:
             - quantity: 1
               price: 100000
               sku: SKU001
+          product_id: 12345
           voucher_type: conditional
           state: 1
           conditions:
@@ -553,9 +559,11 @@ components:
           name_en: Store Hồ Chí Minh
         data:
         - code: "070898022379"
+          product_id: 12345
           voucher_type: conditional
           value: 100000
         - code: "070898022379"
+          product_id: 12345
           voucher_type: conditional
           value: 100000
         success: true
@@ -734,6 +742,7 @@ components:
           - quantity: 1
             price: 100000
             sku: SKU001
+        product_id: 12345
         voucher_type: conditional
         expiry_date: 2025-12-26
         cancel_date: ""
@@ -758,6 +767,11 @@ components:
         value:
           description: Value of voucher
           example: 100000
+          nullable: true
+          type: integer
+        product_id:
+          description: Product ID
+          example: 12345
           nullable: true
           type: integer
         state:
@@ -848,6 +862,7 @@ components:
           - quantity: 1
             price: 100000
             sku: SKU001
+        product_id: 12345
         voucher_type: conditional
         state: 4
         conditions:
@@ -863,6 +878,11 @@ components:
         value:
           description: Value of voucher
           example: 100000
+          nullable: true
+          type: integer
+        product_id:
+          description: Product ID
+          example: 12345
           nullable: true
           type: integer
         state:
@@ -929,6 +949,7 @@ components:
           - quantity: 1
             price: 100000
             sku: SKU001
+        product_id: 12345
         voucher_type: conditional
         state: 1
         conditions:
@@ -951,6 +972,11 @@ components:
           example: 1
           nullable: true
           type: integer
+        product_id:
+          description: Product ID
+          example: 12345
+          nullable: true
+          type: integer
         voucher_type:
           description: "Voucher type, standard or conditional"
           example: conditional
@@ -963,6 +989,7 @@ components:
     ResponseUnReservedSchema_data_inner:
       example:
         code: "070898022379"
+        product_id: 12345
         voucher_type: conditional
         value: 100000
       properties:
@@ -973,6 +1000,11 @@ components:
         value:
           description: Value of voucher
           example: 100000
+          nullable: true
+          type: integer
+        product_id:
+          description: Product ID
+          example: 12345
           nullable: true
           type: integer
         voucher_type:

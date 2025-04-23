@@ -24,6 +24,8 @@ type ResponseUnReservedSchemaDataInner struct {
 	Code *string `json:"code,omitempty"`
 	// Value of voucher
 	Value NullableInt32 `json:"value,omitempty"`
+	// Product ID
+	ProductId NullableInt32 `json:"product_id,omitempty"`
 	// Voucher type, standard or conditional
 	VoucherType *string `json:"voucher_type,omitempty"`
 }
@@ -119,6 +121,48 @@ func (o *ResponseUnReservedSchemaDataInner) UnsetValue() {
 	o.Value.Unset()
 }
 
+// GetProductId returns the ProductId field value if set, zero value otherwise (both if not set or set to explicit null).
+func (o *ResponseUnReservedSchemaDataInner) GetProductId() int32 {
+	if o == nil || IsNil(o.ProductId.Get()) {
+		var ret int32
+		return ret
+	}
+	return *o.ProductId.Get()
+}
+
+// GetProductIdOk returns a tuple with the ProductId field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
+func (o *ResponseUnReservedSchemaDataInner) GetProductIdOk() (*int32, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return o.ProductId.Get(), o.ProductId.IsSet()
+}
+
+// HasProductId returns a boolean if a field has been set.
+func (o *ResponseUnReservedSchemaDataInner) HasProductId() bool {
+	if o != nil && o.ProductId.IsSet() {
+		return true
+	}
+
+	return false
+}
+
+// SetProductId gets a reference to the given NullableInt32 and assigns it to the ProductId field.
+func (o *ResponseUnReservedSchemaDataInner) SetProductId(v int32) {
+	o.ProductId.Set(&v)
+}
+// SetProductIdNil sets the value for ProductId to be an explicit nil
+func (o *ResponseUnReservedSchemaDataInner) SetProductIdNil() {
+	o.ProductId.Set(nil)
+}
+
+// UnsetProductId ensures that no value is present for ProductId, not even an explicit nil
+func (o *ResponseUnReservedSchemaDataInner) UnsetProductId() {
+	o.ProductId.Unset()
+}
+
 // GetVoucherType returns the VoucherType field value if set, zero value otherwise.
 func (o *ResponseUnReservedSchemaDataInner) GetVoucherType() string {
 	if o == nil || IsNil(o.VoucherType) {
@@ -166,6 +210,9 @@ func (o ResponseUnReservedSchemaDataInner) ToMap() (map[string]interface{}, erro
 	}
 	if o.Value.IsSet() {
 		toSerialize["value"] = o.Value.Get()
+	}
+	if o.ProductId.IsSet() {
+		toSerialize["product_id"] = o.ProductId.Get()
 	}
 	if !IsNil(o.VoucherType) {
 		toSerialize["voucher_type"] = o.VoucherType
