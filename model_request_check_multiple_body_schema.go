@@ -27,7 +27,7 @@ type RequestCheckMultipleBodySchema struct {
 	// Bill number will apply vouchers
 	BillNumber *string `json:"bill_number,omitempty"`
 	// Total bill amount
-	TotalBill *int32 `json:"total_bill,omitempty"`
+	TotalBill *int64 `json:"total_bill,omitempty"`
 	// When true the system will execute the flow without reserve
 	SkipReservedWhenMarkUsed *bool `json:"skip_reserved_when_mark_used,omitempty"`
 	// SKU information in bill_number
@@ -148,9 +148,9 @@ func (o *RequestCheckMultipleBodySchema) SetBillNumber(v string) {
 }
 
 // GetTotalBill returns the TotalBill field value if set, zero value otherwise.
-func (o *RequestCheckMultipleBodySchema) GetTotalBill() int32 {
+func (o *RequestCheckMultipleBodySchema) GetTotalBill() int64 {
 	if o == nil || IsNil(o.TotalBill) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.TotalBill
@@ -158,7 +158,7 @@ func (o *RequestCheckMultipleBodySchema) GetTotalBill() int32 {
 
 // GetTotalBillOk returns a tuple with the TotalBill field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *RequestCheckMultipleBodySchema) GetTotalBillOk() (*int32, bool) {
+func (o *RequestCheckMultipleBodySchema) GetTotalBillOk() (*int64, bool) {
 	if o == nil || IsNil(o.TotalBill) {
 		return nil, false
 	}
@@ -174,8 +174,8 @@ func (o *RequestCheckMultipleBodySchema) HasTotalBill() bool {
 	return false
 }
 
-// SetTotalBill gets a reference to the given int32 and assigns it to the TotalBill field.
-func (o *RequestCheckMultipleBodySchema) SetTotalBill(v int32) {
+// SetTotalBill gets a reference to the given int64 and assigns it to the TotalBill field.
+func (o *RequestCheckMultipleBodySchema) SetTotalBill(v int64) {
 	o.TotalBill = &v
 }
 

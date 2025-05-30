@@ -5,8 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** | Voucher code | [optional] 
-**Value** | Pointer to **NullableInt32** | Value of voucher | [optional] 
-**ProductId** | Pointer to **NullableInt32** | Product ID | [optional] 
+**Value** | Pointer to **NullableInt64** | Value of voucher | [optional] 
+**ProductId** | Pointer to **NullableInt64** | Product ID | [optional] 
 **VoucherType** | Pointer to **string** | Voucher type, standard or conditional | [optional] 
 
 ## Methods
@@ -55,20 +55,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetValue
 
-`func (o *ResponseUnReservedSchemaDataInner) GetValue() int32`
+`func (o *ResponseUnReservedSchemaDataInner) GetValue() int64`
 
 GetValue returns the Value field if non-nil, zero value otherwise.
 
 ### GetValueOk
 
-`func (o *ResponseUnReservedSchemaDataInner) GetValueOk() (*int32, bool)`
+`func (o *ResponseUnReservedSchemaDataInner) GetValueOk() (*int64, bool)`
 
 GetValueOk returns a tuple with the Value field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetValue
 
-`func (o *ResponseUnReservedSchemaDataInner) SetValue(v int32)`
+`func (o *ResponseUnReservedSchemaDataInner) SetValue(v int64)`
 
 SetValue sets Value field to given value.
 
@@ -90,20 +90,20 @@ HasValue returns a boolean if a field has been set.
 UnsetValue ensures that no value is present for Value, not even an explicit nil
 ### GetProductId
 
-`func (o *ResponseUnReservedSchemaDataInner) GetProductId() int32`
+`func (o *ResponseUnReservedSchemaDataInner) GetProductId() int64`
 
 GetProductId returns the ProductId field if non-nil, zero value otherwise.
 
 ### GetProductIdOk
 
-`func (o *ResponseUnReservedSchemaDataInner) GetProductIdOk() (*int32, bool)`
+`func (o *ResponseUnReservedSchemaDataInner) GetProductIdOk() (*int64, bool)`
 
 GetProductIdOk returns a tuple with the ProductId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetProductId
 
-`func (o *ResponseUnReservedSchemaDataInner) SetProductId(v int32)`
+`func (o *ResponseUnReservedSchemaDataInner) SetProductId(v int64)`
 
 SetProductId sets ProductId field to given value.
 

@@ -23,14 +23,14 @@ type ResponseReservedSchemaDataInner struct {
 	// Voucher code
 	Code *string `json:"code,omitempty"`
 	// Value of voucher
-	Value NullableInt32 `json:"value,omitempty"`
+	Value NullableInt64 `json:"value,omitempty"`
 	// State of voucher
-	State NullableInt32 `json:"state,omitempty"`
+	State NullableInt64 `json:"state,omitempty"`
 	// Product ID
-	ProductId NullableInt32 `json:"product_id,omitempty"`
+	ProductId NullableInt64 `json:"product_id,omitempty"`
 	// Voucher type, standard or conditional
 	VoucherType *string `json:"voucher_type,omitempty"`
-	Conditions *ResponseMarkUseMultipleSchemaDataInnerConditions `json:"conditions,omitempty"`
+	Conditions *ResponseCheckMultipleSchemaDataInnerConditions `json:"conditions,omitempty"`
 	Redemptions *ResponseReservedSchemaDataInnerRedemptions `json:"redemptions,omitempty"`
 }
 
@@ -84,9 +84,9 @@ func (o *ResponseReservedSchemaDataInner) SetCode(v string) {
 }
 
 // GetValue returns the Value field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *ResponseReservedSchemaDataInner) GetValue() int32 {
+func (o *ResponseReservedSchemaDataInner) GetValue() int64 {
 	if o == nil || IsNil(o.Value.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Value.Get()
@@ -95,7 +95,7 @@ func (o *ResponseReservedSchemaDataInner) GetValue() int32 {
 // GetValueOk returns a tuple with the Value field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *ResponseReservedSchemaDataInner) GetValueOk() (*int32, bool) {
+func (o *ResponseReservedSchemaDataInner) GetValueOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -111,8 +111,8 @@ func (o *ResponseReservedSchemaDataInner) HasValue() bool {
 	return false
 }
 
-// SetValue gets a reference to the given NullableInt32 and assigns it to the Value field.
-func (o *ResponseReservedSchemaDataInner) SetValue(v int32) {
+// SetValue gets a reference to the given NullableInt64 and assigns it to the Value field.
+func (o *ResponseReservedSchemaDataInner) SetValue(v int64) {
 	o.Value.Set(&v)
 }
 // SetValueNil sets the value for Value to be an explicit nil
@@ -126,9 +126,9 @@ func (o *ResponseReservedSchemaDataInner) UnsetValue() {
 }
 
 // GetState returns the State field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *ResponseReservedSchemaDataInner) GetState() int32 {
+func (o *ResponseReservedSchemaDataInner) GetState() int64 {
 	if o == nil || IsNil(o.State.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.State.Get()
@@ -137,7 +137,7 @@ func (o *ResponseReservedSchemaDataInner) GetState() int32 {
 // GetStateOk returns a tuple with the State field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *ResponseReservedSchemaDataInner) GetStateOk() (*int32, bool) {
+func (o *ResponseReservedSchemaDataInner) GetStateOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -153,8 +153,8 @@ func (o *ResponseReservedSchemaDataInner) HasState() bool {
 	return false
 }
 
-// SetState gets a reference to the given NullableInt32 and assigns it to the State field.
-func (o *ResponseReservedSchemaDataInner) SetState(v int32) {
+// SetState gets a reference to the given NullableInt64 and assigns it to the State field.
+func (o *ResponseReservedSchemaDataInner) SetState(v int64) {
 	o.State.Set(&v)
 }
 // SetStateNil sets the value for State to be an explicit nil
@@ -168,9 +168,9 @@ func (o *ResponseReservedSchemaDataInner) UnsetState() {
 }
 
 // GetProductId returns the ProductId field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *ResponseReservedSchemaDataInner) GetProductId() int32 {
+func (o *ResponseReservedSchemaDataInner) GetProductId() int64 {
 	if o == nil || IsNil(o.ProductId.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.ProductId.Get()
@@ -179,7 +179,7 @@ func (o *ResponseReservedSchemaDataInner) GetProductId() int32 {
 // GetProductIdOk returns a tuple with the ProductId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *ResponseReservedSchemaDataInner) GetProductIdOk() (*int32, bool) {
+func (o *ResponseReservedSchemaDataInner) GetProductIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -195,8 +195,8 @@ func (o *ResponseReservedSchemaDataInner) HasProductId() bool {
 	return false
 }
 
-// SetProductId gets a reference to the given NullableInt32 and assigns it to the ProductId field.
-func (o *ResponseReservedSchemaDataInner) SetProductId(v int32) {
+// SetProductId gets a reference to the given NullableInt64 and assigns it to the ProductId field.
+func (o *ResponseReservedSchemaDataInner) SetProductId(v int64) {
 	o.ProductId.Set(&v)
 }
 // SetProductIdNil sets the value for ProductId to be an explicit nil
@@ -242,9 +242,9 @@ func (o *ResponseReservedSchemaDataInner) SetVoucherType(v string) {
 }
 
 // GetConditions returns the Conditions field value if set, zero value otherwise.
-func (o *ResponseReservedSchemaDataInner) GetConditions() ResponseMarkUseMultipleSchemaDataInnerConditions {
+func (o *ResponseReservedSchemaDataInner) GetConditions() ResponseCheckMultipleSchemaDataInnerConditions {
 	if o == nil || IsNil(o.Conditions) {
-		var ret ResponseMarkUseMultipleSchemaDataInnerConditions
+		var ret ResponseCheckMultipleSchemaDataInnerConditions
 		return ret
 	}
 	return *o.Conditions
@@ -252,7 +252,7 @@ func (o *ResponseReservedSchemaDataInner) GetConditions() ResponseMarkUseMultipl
 
 // GetConditionsOk returns a tuple with the Conditions field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ResponseReservedSchemaDataInner) GetConditionsOk() (*ResponseMarkUseMultipleSchemaDataInnerConditions, bool) {
+func (o *ResponseReservedSchemaDataInner) GetConditionsOk() (*ResponseCheckMultipleSchemaDataInnerConditions, bool) {
 	if o == nil || IsNil(o.Conditions) {
 		return nil, false
 	}
@@ -268,8 +268,8 @@ func (o *ResponseReservedSchemaDataInner) HasConditions() bool {
 	return false
 }
 
-// SetConditions gets a reference to the given ResponseMarkUseMultipleSchemaDataInnerConditions and assigns it to the Conditions field.
-func (o *ResponseReservedSchemaDataInner) SetConditions(v ResponseMarkUseMultipleSchemaDataInnerConditions) {
+// SetConditions gets a reference to the given ResponseCheckMultipleSchemaDataInnerConditions and assigns it to the Conditions field.
+func (o *ResponseReservedSchemaDataInner) SetConditions(v ResponseCheckMultipleSchemaDataInnerConditions) {
 	o.Conditions = &v
 }
 

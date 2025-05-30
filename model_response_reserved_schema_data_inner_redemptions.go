@@ -23,7 +23,7 @@ type ResponseReservedSchemaDataInnerRedemptions struct {
 	// Contains redeemed SKU information of the voucher (for voucher type is conditional and support sku)
 	RedeemSkuCodes []ResponseCheckMultipleSchemaDataInnerRedemptionsRedeemSkuCodesInner `json:"redeem_sku_codes,omitempty"`
 	// Actual redemption value of voucher type = conditional
-	RedemptionValue *int32 `json:"redemption_value,omitempty"`
+	RedemptionValue *int64 `json:"redemption_value,omitempty"`
 }
 
 // NewResponseReservedSchemaDataInnerRedemptions instantiates a new ResponseReservedSchemaDataInnerRedemptions object
@@ -76,9 +76,9 @@ func (o *ResponseReservedSchemaDataInnerRedemptions) SetRedeemSkuCodes(v []Respo
 }
 
 // GetRedemptionValue returns the RedemptionValue field value if set, zero value otherwise.
-func (o *ResponseReservedSchemaDataInnerRedemptions) GetRedemptionValue() int32 {
+func (o *ResponseReservedSchemaDataInnerRedemptions) GetRedemptionValue() int64 {
 	if o == nil || IsNil(o.RedemptionValue) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.RedemptionValue
@@ -86,7 +86,7 @@ func (o *ResponseReservedSchemaDataInnerRedemptions) GetRedemptionValue() int32 
 
 // GetRedemptionValueOk returns a tuple with the RedemptionValue field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ResponseReservedSchemaDataInnerRedemptions) GetRedemptionValueOk() (*int32, bool) {
+func (o *ResponseReservedSchemaDataInnerRedemptions) GetRedemptionValueOk() (*int64, bool) {
 	if o == nil || IsNil(o.RedemptionValue) {
 		return nil, false
 	}
@@ -102,8 +102,8 @@ func (o *ResponseReservedSchemaDataInnerRedemptions) HasRedemptionValue() bool {
 	return false
 }
 
-// SetRedemptionValue gets a reference to the given int32 and assigns it to the RedemptionValue field.
-func (o *ResponseReservedSchemaDataInnerRedemptions) SetRedemptionValue(v int32) {
+// SetRedemptionValue gets a reference to the given int64 and assigns it to the RedemptionValue field.
+func (o *ResponseReservedSchemaDataInnerRedemptions) SetRedemptionValue(v int64) {
 	o.RedemptionValue = &v
 }
 

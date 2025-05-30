@@ -5,9 +5,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** | Voucher code | [optional] 
-**Value** | Pointer to **NullableInt32** | Value of voucher | [optional] 
-**ProductId** | Pointer to **NullableInt32** | Product ID | [optional] 
-**State** | Pointer to **NullableInt32** | State of voucher | [optional] 
+**Value** | Pointer to **NullableInt64** | Value of voucher | [optional] 
+**ProductId** | Pointer to **NullableInt64** | Product ID | [optional] 
+**State** | Pointer to **NullableInt64** | State of voucher | [optional] 
 **VoucherType** | Pointer to **string** | Voucher type, standard or conditional | [optional] 
 **ExpiryDate** | Pointer to **string** | Expiry date of voucher (YYYY-MM-DD) | [optional] 
 **CancelDate** | Pointer to **string** | Date cancel voucher (YYYY-MM-DD) | [optional] 
@@ -60,20 +60,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetValue
 
-`func (o *ResponseCheckMultipleSchemaDataInner) GetValue() int32`
+`func (o *ResponseCheckMultipleSchemaDataInner) GetValue() int64`
 
 GetValue returns the Value field if non-nil, zero value otherwise.
 
 ### GetValueOk
 
-`func (o *ResponseCheckMultipleSchemaDataInner) GetValueOk() (*int32, bool)`
+`func (o *ResponseCheckMultipleSchemaDataInner) GetValueOk() (*int64, bool)`
 
 GetValueOk returns a tuple with the Value field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetValue
 
-`func (o *ResponseCheckMultipleSchemaDataInner) SetValue(v int32)`
+`func (o *ResponseCheckMultipleSchemaDataInner) SetValue(v int64)`
 
 SetValue sets Value field to given value.
 
@@ -95,20 +95,20 @@ HasValue returns a boolean if a field has been set.
 UnsetValue ensures that no value is present for Value, not even an explicit nil
 ### GetProductId
 
-`func (o *ResponseCheckMultipleSchemaDataInner) GetProductId() int32`
+`func (o *ResponseCheckMultipleSchemaDataInner) GetProductId() int64`
 
 GetProductId returns the ProductId field if non-nil, zero value otherwise.
 
 ### GetProductIdOk
 
-`func (o *ResponseCheckMultipleSchemaDataInner) GetProductIdOk() (*int32, bool)`
+`func (o *ResponseCheckMultipleSchemaDataInner) GetProductIdOk() (*int64, bool)`
 
 GetProductIdOk returns a tuple with the ProductId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetProductId
 
-`func (o *ResponseCheckMultipleSchemaDataInner) SetProductId(v int32)`
+`func (o *ResponseCheckMultipleSchemaDataInner) SetProductId(v int64)`
 
 SetProductId sets ProductId field to given value.
 
@@ -130,20 +130,20 @@ HasProductId returns a boolean if a field has been set.
 UnsetProductId ensures that no value is present for ProductId, not even an explicit nil
 ### GetState
 
-`func (o *ResponseCheckMultipleSchemaDataInner) GetState() int32`
+`func (o *ResponseCheckMultipleSchemaDataInner) GetState() int64`
 
 GetState returns the State field if non-nil, zero value otherwise.
 
 ### GetStateOk
 
-`func (o *ResponseCheckMultipleSchemaDataInner) GetStateOk() (*int32, bool)`
+`func (o *ResponseCheckMultipleSchemaDataInner) GetStateOk() (*int64, bool)`
 
 GetStateOk returns a tuple with the State field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetState
 
-`func (o *ResponseCheckMultipleSchemaDataInner) SetState(v int32)`
+`func (o *ResponseCheckMultipleSchemaDataInner) SetState(v int64)`
 
 SetState sets State field to given value.
 

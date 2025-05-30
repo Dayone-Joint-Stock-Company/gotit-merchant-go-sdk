@@ -23,9 +23,9 @@ type ResponseCheckMultipleSchemaDataInnerRedemptionsRedeemSkuCodesInner struct {
 	// SKU code is redeemed for voucher
 	Sku *string `json:"sku,omitempty"`
 	// SKU quantity is redeemed for voucher
-	Quantity *int32 `json:"quantity,omitempty"`
+	Quantity *int64 `json:"quantity,omitempty"`
 	// Selling price of SKU in bill.
-	Price *int32 `json:"price,omitempty"`
+	Price *int64 `json:"price,omitempty"`
 }
 
 // NewResponseCheckMultipleSchemaDataInnerRedemptionsRedeemSkuCodesInner instantiates a new ResponseCheckMultipleSchemaDataInnerRedemptionsRedeemSkuCodesInner object
@@ -78,9 +78,9 @@ func (o *ResponseCheckMultipleSchemaDataInnerRedemptionsRedeemSkuCodesInner) Set
 }
 
 // GetQuantity returns the Quantity field value if set, zero value otherwise.
-func (o *ResponseCheckMultipleSchemaDataInnerRedemptionsRedeemSkuCodesInner) GetQuantity() int32 {
+func (o *ResponseCheckMultipleSchemaDataInnerRedemptionsRedeemSkuCodesInner) GetQuantity() int64 {
 	if o == nil || IsNil(o.Quantity) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Quantity
@@ -88,7 +88,7 @@ func (o *ResponseCheckMultipleSchemaDataInnerRedemptionsRedeemSkuCodesInner) Get
 
 // GetQuantityOk returns a tuple with the Quantity field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ResponseCheckMultipleSchemaDataInnerRedemptionsRedeemSkuCodesInner) GetQuantityOk() (*int32, bool) {
+func (o *ResponseCheckMultipleSchemaDataInnerRedemptionsRedeemSkuCodesInner) GetQuantityOk() (*int64, bool) {
 	if o == nil || IsNil(o.Quantity) {
 		return nil, false
 	}
@@ -104,15 +104,15 @@ func (o *ResponseCheckMultipleSchemaDataInnerRedemptionsRedeemSkuCodesInner) Has
 	return false
 }
 
-// SetQuantity gets a reference to the given int32 and assigns it to the Quantity field.
-func (o *ResponseCheckMultipleSchemaDataInnerRedemptionsRedeemSkuCodesInner) SetQuantity(v int32) {
+// SetQuantity gets a reference to the given int64 and assigns it to the Quantity field.
+func (o *ResponseCheckMultipleSchemaDataInnerRedemptionsRedeemSkuCodesInner) SetQuantity(v int64) {
 	o.Quantity = &v
 }
 
 // GetPrice returns the Price field value if set, zero value otherwise.
-func (o *ResponseCheckMultipleSchemaDataInnerRedemptionsRedeemSkuCodesInner) GetPrice() int32 {
+func (o *ResponseCheckMultipleSchemaDataInnerRedemptionsRedeemSkuCodesInner) GetPrice() int64 {
 	if o == nil || IsNil(o.Price) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Price
@@ -120,7 +120,7 @@ func (o *ResponseCheckMultipleSchemaDataInnerRedemptionsRedeemSkuCodesInner) Get
 
 // GetPriceOk returns a tuple with the Price field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ResponseCheckMultipleSchemaDataInnerRedemptionsRedeemSkuCodesInner) GetPriceOk() (*int32, bool) {
+func (o *ResponseCheckMultipleSchemaDataInnerRedemptionsRedeemSkuCodesInner) GetPriceOk() (*int64, bool) {
 	if o == nil || IsNil(o.Price) {
 		return nil, false
 	}
@@ -136,8 +136,8 @@ func (o *ResponseCheckMultipleSchemaDataInnerRedemptionsRedeemSkuCodesInner) Has
 	return false
 }
 
-// SetPrice gets a reference to the given int32 and assigns it to the Price field.
-func (o *ResponseCheckMultipleSchemaDataInnerRedemptionsRedeemSkuCodesInner) SetPrice(v int32) {
+// SetPrice gets a reference to the given int64 and assigns it to the Price field.
+func (o *ResponseCheckMultipleSchemaDataInnerRedemptionsRedeemSkuCodesInner) SetPrice(v int64) {
 	o.Price = &v
 }
 

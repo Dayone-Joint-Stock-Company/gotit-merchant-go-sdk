@@ -5,8 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Sku** | Pointer to **string** | SKU code | [optional] 
-**Quantity** | Pointer to **int32** | Quantity of SKU. Default &#x3D; 1 | [optional] 
-**Price** | Pointer to **int32** | Price of SKU in bill | [optional] 
+**Quantity** | Pointer to **int64** | Quantity of SKU. Default &#x3D; 1 | [optional] 
+**Price** | Pointer to **int64** | Price of SKU in bill | [optional] 
 
 ## Methods
 
@@ -54,20 +54,20 @@ HasSku returns a boolean if a field has been set.
 
 ### GetQuantity
 
-`func (o *RequestCheckMultipleBodySchemaSkusInfoInner) GetQuantity() int32`
+`func (o *RequestCheckMultipleBodySchemaSkusInfoInner) GetQuantity() int64`
 
 GetQuantity returns the Quantity field if non-nil, zero value otherwise.
 
 ### GetQuantityOk
 
-`func (o *RequestCheckMultipleBodySchemaSkusInfoInner) GetQuantityOk() (*int32, bool)`
+`func (o *RequestCheckMultipleBodySchemaSkusInfoInner) GetQuantityOk() (*int64, bool)`
 
 GetQuantityOk returns a tuple with the Quantity field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetQuantity
 
-`func (o *RequestCheckMultipleBodySchemaSkusInfoInner) SetQuantity(v int32)`
+`func (o *RequestCheckMultipleBodySchemaSkusInfoInner) SetQuantity(v int64)`
 
 SetQuantity sets Quantity field to given value.
 
@@ -79,20 +79,20 @@ HasQuantity returns a boolean if a field has been set.
 
 ### GetPrice
 
-`func (o *RequestCheckMultipleBodySchemaSkusInfoInner) GetPrice() int32`
+`func (o *RequestCheckMultipleBodySchemaSkusInfoInner) GetPrice() int64`
 
 GetPrice returns the Price field if non-nil, zero value otherwise.
 
 ### GetPriceOk
 
-`func (o *RequestCheckMultipleBodySchemaSkusInfoInner) GetPriceOk() (*int32, bool)`
+`func (o *RequestCheckMultipleBodySchemaSkusInfoInner) GetPriceOk() (*int64, bool)`
 
 GetPriceOk returns a tuple with the Price field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPrice
 
-`func (o *RequestCheckMultipleBodySchemaSkusInfoInner) SetPrice(v int32)`
+`func (o *RequestCheckMultipleBodySchemaSkusInfoInner) SetPrice(v int64)`
 
 SetPrice sets Price field to given value.
 

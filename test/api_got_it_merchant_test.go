@@ -6,7 +6,7 @@ import (
 
     "github.com/stretchr/testify/assert"
     "github.com/stretchr/testify/require"
-    merchantApiClient "github.com/Dayone-Joint-Stock-Company/gotit-merchant-go-sdk/v1.0.0"
+    merchantApiClient "github.com/Dayone-Joint-Stock-Company/gotit-merchant-go-sdk"
 )
 
 func TestGotItMerchantAPIService(t *testing.T) {
@@ -23,11 +23,11 @@ func TestGotItMerchantAPIService(t *testing.T) {
         pin := "4205"
         billNumber := "BILL071717127083"
         sku1 := "3002275"
-        quantity1 := int32(2)
-        price1 := int32(100000)
+        quantity1 := int64(2)
+        price1 := int64(100000)
         sku2 := "3002980"
-        quantity2 := int32(3)
-        price2 := int32(100000)
+        quantity2 := int64(3)
+        price2 := int64(100000)
 
         body := merchantApiClient.RequestCheckMultipleBodySchema{
             Pin:        &pin,
@@ -51,11 +51,11 @@ func TestGotItMerchantAPIService(t *testing.T) {
         pin := "4205"
         billNumber := "BILL071717127083"
         sku1 := "3002275"
-        quantity1 := int32(2)
-        price1 := int32(100000)
+        quantity1 := int64(2)
+        price1 := int64(100000)
         sku2 := "3002980"
-        quantity2 := int32(3)
-        price2 := int32(100000)
+        quantity2 := int64(3)
+        price2 := int64(100000)
 
         body := merchantApiClient.RequestReservedBodySchema{
             Pin:        &pin,
@@ -97,11 +97,11 @@ func TestGotItMerchantAPIService(t *testing.T) {
         pin := "4205"
         billNumber := "BILL071717127083"
         sku1 := "3002275"
-        quantity1 := int32(2)
-        price1 := int32(100000)
+        quantity1 := int64(2)
+        price1 := int64(100000)
         sku2 := "3002980"
-        quantity2 := int32(3)
-        price2 := int32(100000)
+        quantity2 := int64(3)
+        price2 := int64(100000)
 
         body := merchantApiClient.RequestMarkUseMultipleBodySchema{
             Pin:        &pin,

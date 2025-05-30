@@ -5,8 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Sku** | Pointer to **string** | SKU code is redeemed for voucher | [optional] 
-**Quantity** | Pointer to **int32** | SKU quantity is redeemed for voucher | [optional] 
-**Price** | Pointer to **int32** | Selling price of SKU in bill. | [optional] 
+**Quantity** | Pointer to **int64** | SKU quantity is redeemed for voucher | [optional] 
+**Price** | Pointer to **int64** | Selling price of SKU in bill. | [optional] 
 
 ## Methods
 
@@ -54,20 +54,20 @@ HasSku returns a boolean if a field has been set.
 
 ### GetQuantity
 
-`func (o *ResponseCheckMultipleSchemaDataInnerRedemptionsRedeemSkuCodesInner) GetQuantity() int32`
+`func (o *ResponseCheckMultipleSchemaDataInnerRedemptionsRedeemSkuCodesInner) GetQuantity() int64`
 
 GetQuantity returns the Quantity field if non-nil, zero value otherwise.
 
 ### GetQuantityOk
 
-`func (o *ResponseCheckMultipleSchemaDataInnerRedemptionsRedeemSkuCodesInner) GetQuantityOk() (*int32, bool)`
+`func (o *ResponseCheckMultipleSchemaDataInnerRedemptionsRedeemSkuCodesInner) GetQuantityOk() (*int64, bool)`
 
 GetQuantityOk returns a tuple with the Quantity field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetQuantity
 
-`func (o *ResponseCheckMultipleSchemaDataInnerRedemptionsRedeemSkuCodesInner) SetQuantity(v int32)`
+`func (o *ResponseCheckMultipleSchemaDataInnerRedemptionsRedeemSkuCodesInner) SetQuantity(v int64)`
 
 SetQuantity sets Quantity field to given value.
 
@@ -79,20 +79,20 @@ HasQuantity returns a boolean if a field has been set.
 
 ### GetPrice
 
-`func (o *ResponseCheckMultipleSchemaDataInnerRedemptionsRedeemSkuCodesInner) GetPrice() int32`
+`func (o *ResponseCheckMultipleSchemaDataInnerRedemptionsRedeemSkuCodesInner) GetPrice() int64`
 
 GetPrice returns the Price field if non-nil, zero value otherwise.
 
 ### GetPriceOk
 
-`func (o *ResponseCheckMultipleSchemaDataInnerRedemptionsRedeemSkuCodesInner) GetPriceOk() (*int32, bool)`
+`func (o *ResponseCheckMultipleSchemaDataInnerRedemptionsRedeemSkuCodesInner) GetPriceOk() (*int64, bool)`
 
 GetPriceOk returns a tuple with the Price field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPrice
 
-`func (o *ResponseCheckMultipleSchemaDataInnerRedemptionsRedeemSkuCodesInner) SetPrice(v int32)`
+`func (o *ResponseCheckMultipleSchemaDataInnerRedemptionsRedeemSkuCodesInner) SetPrice(v int64)`
 
 SetPrice sets Price field to given value.
 
