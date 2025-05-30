@@ -27,7 +27,7 @@ type ResponseCheckMultipleSchemaDataInnerConditions struct {
 	// Promo non-effective day of week
 	ExcludeRecurringDay []string `json:"exclude_recurring_day,omitempty"`
 	// Order value of voucher type = conditional
-	OrderValue *int64 `json:"order_value,omitempty"`
+	OrderValue NullableInt64 `json:"order_value,omitempty"`
 	// List of redeemable SKUs of the voucher code. For voucher type = conditional, bill number must contain at least 1 redeemable SKU of the voucher.
 	RedeemableSkus []string `json:"redeemable_skus,omitempty"`
 }
@@ -145,36 +145,46 @@ func (o *ResponseCheckMultipleSchemaDataInnerConditions) SetExcludeRecurringDay(
 	o.ExcludeRecurringDay = v
 }
 
-// GetOrderValue returns the OrderValue field value if set, zero value otherwise.
+// GetOrderValue returns the OrderValue field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *ResponseCheckMultipleSchemaDataInnerConditions) GetOrderValue() int64 {
-	if o == nil || IsNil(o.OrderValue) {
+	if o == nil || IsNil(o.OrderValue.Get()) {
 		var ret int64
 		return ret
 	}
-	return *o.OrderValue
+	return *o.OrderValue.Get()
 }
 
 // GetOrderValueOk returns a tuple with the OrderValue field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *ResponseCheckMultipleSchemaDataInnerConditions) GetOrderValueOk() (*int64, bool) {
-	if o == nil || IsNil(o.OrderValue) {
+	if o == nil {
 		return nil, false
 	}
-	return o.OrderValue, true
+	return o.OrderValue.Get(), o.OrderValue.IsSet()
 }
 
 // HasOrderValue returns a boolean if a field has been set.
 func (o *ResponseCheckMultipleSchemaDataInnerConditions) HasOrderValue() bool {
-	if o != nil && !IsNil(o.OrderValue) {
+	if o != nil && o.OrderValue.IsSet() {
 		return true
 	}
 
 	return false
 }
 
-// SetOrderValue gets a reference to the given int64 and assigns it to the OrderValue field.
+// SetOrderValue gets a reference to the given NullableInt64 and assigns it to the OrderValue field.
 func (o *ResponseCheckMultipleSchemaDataInnerConditions) SetOrderValue(v int64) {
-	o.OrderValue = &v
+	o.OrderValue.Set(&v)
+}
+// SetOrderValueNil sets the value for OrderValue to be an explicit nil
+func (o *ResponseCheckMultipleSchemaDataInnerConditions) SetOrderValueNil() {
+	o.OrderValue.Set(nil)
+}
+
+// UnsetOrderValue ensures that no value is present for OrderValue, not even an explicit nil
+func (o *ResponseCheckMultipleSchemaDataInnerConditions) UnsetOrderValue() {
+	o.OrderValue.Unset()
 }
 
 // GetRedeemableSkus returns the RedeemableSkus field value if set, zero value otherwise.
@@ -228,8 +238,8 @@ func (o ResponseCheckMultipleSchemaDataInnerConditions) ToMap() (map[string]inte
 	if !IsNil(o.ExcludeRecurringDay) {
 		toSerialize["exclude_recurring_day"] = o.ExcludeRecurringDay
 	}
-	if !IsNil(o.OrderValue) {
-		toSerialize["order_value"] = o.OrderValue
+	if o.OrderValue.IsSet() {
+		toSerialize["order_value"] = o.OrderValue.Get()
 	}
 	if !IsNil(o.RedeemableSkus) {
 		toSerialize["redeemable_skus"] = o.RedeemableSkus
