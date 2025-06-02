@@ -5,11 +5,11 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** | Voucher code | [optional] 
-**Value** | Pointer to **NullableInt32** | Value of voucher | [optional] 
-**State** | Pointer to **NullableInt32** | State of voucher | [optional] 
-**ProductId** | Pointer to **NullableInt32** | Product ID | [optional] 
+**Value** | Pointer to **NullableInt64** | Value of voucher | [optional] 
+**State** | Pointer to **NullableInt64** | State of voucher | [optional] 
+**ProductId** | Pointer to **NullableInt64** | Product ID | [optional] 
 **VoucherType** | Pointer to **string** | Voucher type, standard or conditional | [optional] 
-**Conditions** | Pointer to [**ResponseMarkUseMultipleSchemaDataInnerConditions**](ResponseMarkUseMultipleSchemaDataInnerConditions.md) |  | [optional] 
+**Conditions** | Pointer to [**ResponseCheckMultipleSchemaDataInnerConditions**](ResponseCheckMultipleSchemaDataInnerConditions.md) |  | [optional] 
 **Redemptions** | Pointer to [**ResponseReservedSchemaDataInnerRedemptions**](ResponseReservedSchemaDataInnerRedemptions.md) |  | [optional] 
 
 ## Methods
@@ -58,20 +58,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetValue
 
-`func (o *ResponseReservedSchemaDataInner) GetValue() int32`
+`func (o *ResponseReservedSchemaDataInner) GetValue() int64`
 
 GetValue returns the Value field if non-nil, zero value otherwise.
 
 ### GetValueOk
 
-`func (o *ResponseReservedSchemaDataInner) GetValueOk() (*int32, bool)`
+`func (o *ResponseReservedSchemaDataInner) GetValueOk() (*int64, bool)`
 
 GetValueOk returns a tuple with the Value field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetValue
 
-`func (o *ResponseReservedSchemaDataInner) SetValue(v int32)`
+`func (o *ResponseReservedSchemaDataInner) SetValue(v int64)`
 
 SetValue sets Value field to given value.
 
@@ -93,20 +93,20 @@ HasValue returns a boolean if a field has been set.
 UnsetValue ensures that no value is present for Value, not even an explicit nil
 ### GetState
 
-`func (o *ResponseReservedSchemaDataInner) GetState() int32`
+`func (o *ResponseReservedSchemaDataInner) GetState() int64`
 
 GetState returns the State field if non-nil, zero value otherwise.
 
 ### GetStateOk
 
-`func (o *ResponseReservedSchemaDataInner) GetStateOk() (*int32, bool)`
+`func (o *ResponseReservedSchemaDataInner) GetStateOk() (*int64, bool)`
 
 GetStateOk returns a tuple with the State field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetState
 
-`func (o *ResponseReservedSchemaDataInner) SetState(v int32)`
+`func (o *ResponseReservedSchemaDataInner) SetState(v int64)`
 
 SetState sets State field to given value.
 
@@ -128,20 +128,20 @@ HasState returns a boolean if a field has been set.
 UnsetState ensures that no value is present for State, not even an explicit nil
 ### GetProductId
 
-`func (o *ResponseReservedSchemaDataInner) GetProductId() int32`
+`func (o *ResponseReservedSchemaDataInner) GetProductId() int64`
 
 GetProductId returns the ProductId field if non-nil, zero value otherwise.
 
 ### GetProductIdOk
 
-`func (o *ResponseReservedSchemaDataInner) GetProductIdOk() (*int32, bool)`
+`func (o *ResponseReservedSchemaDataInner) GetProductIdOk() (*int64, bool)`
 
 GetProductIdOk returns a tuple with the ProductId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetProductId
 
-`func (o *ResponseReservedSchemaDataInner) SetProductId(v int32)`
+`func (o *ResponseReservedSchemaDataInner) SetProductId(v int64)`
 
 SetProductId sets ProductId field to given value.
 
@@ -188,20 +188,20 @@ HasVoucherType returns a boolean if a field has been set.
 
 ### GetConditions
 
-`func (o *ResponseReservedSchemaDataInner) GetConditions() ResponseMarkUseMultipleSchemaDataInnerConditions`
+`func (o *ResponseReservedSchemaDataInner) GetConditions() ResponseCheckMultipleSchemaDataInnerConditions`
 
 GetConditions returns the Conditions field if non-nil, zero value otherwise.
 
 ### GetConditionsOk
 
-`func (o *ResponseReservedSchemaDataInner) GetConditionsOk() (*ResponseMarkUseMultipleSchemaDataInnerConditions, bool)`
+`func (o *ResponseReservedSchemaDataInner) GetConditionsOk() (*ResponseCheckMultipleSchemaDataInnerConditions, bool)`
 
 GetConditionsOk returns a tuple with the Conditions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetConditions
 
-`func (o *ResponseReservedSchemaDataInner) SetConditions(v ResponseMarkUseMultipleSchemaDataInnerConditions)`
+`func (o *ResponseReservedSchemaDataInner) SetConditions(v ResponseCheckMultipleSchemaDataInnerConditions)`
 
 SetConditions sets Conditions field to given value.
 

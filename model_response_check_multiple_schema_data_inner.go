@@ -23,11 +23,11 @@ type ResponseCheckMultipleSchemaDataInner struct {
 	// Voucher code
 	Code *string `json:"code,omitempty"`
 	// Value of voucher
-	Value NullableInt32 `json:"value,omitempty"`
+	Value NullableInt64 `json:"value,omitempty"`
 	// Product ID
-	ProductId NullableInt32 `json:"product_id,omitempty"`
+	ProductId NullableInt64 `json:"product_id,omitempty"`
 	// State of voucher
-	State NullableInt32 `json:"state,omitempty"`
+	State NullableInt64 `json:"state,omitempty"`
 	// Voucher type, standard or conditional
 	VoucherType *string `json:"voucher_type,omitempty"`
 	// Expiry date of voucher (YYYY-MM-DD)
@@ -88,9 +88,9 @@ func (o *ResponseCheckMultipleSchemaDataInner) SetCode(v string) {
 }
 
 // GetValue returns the Value field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *ResponseCheckMultipleSchemaDataInner) GetValue() int32 {
+func (o *ResponseCheckMultipleSchemaDataInner) GetValue() int64 {
 	if o == nil || IsNil(o.Value.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Value.Get()
@@ -99,7 +99,7 @@ func (o *ResponseCheckMultipleSchemaDataInner) GetValue() int32 {
 // GetValueOk returns a tuple with the Value field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *ResponseCheckMultipleSchemaDataInner) GetValueOk() (*int32, bool) {
+func (o *ResponseCheckMultipleSchemaDataInner) GetValueOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -115,8 +115,8 @@ func (o *ResponseCheckMultipleSchemaDataInner) HasValue() bool {
 	return false
 }
 
-// SetValue gets a reference to the given NullableInt32 and assigns it to the Value field.
-func (o *ResponseCheckMultipleSchemaDataInner) SetValue(v int32) {
+// SetValue gets a reference to the given NullableInt64 and assigns it to the Value field.
+func (o *ResponseCheckMultipleSchemaDataInner) SetValue(v int64) {
 	o.Value.Set(&v)
 }
 // SetValueNil sets the value for Value to be an explicit nil
@@ -130,9 +130,9 @@ func (o *ResponseCheckMultipleSchemaDataInner) UnsetValue() {
 }
 
 // GetProductId returns the ProductId field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *ResponseCheckMultipleSchemaDataInner) GetProductId() int32 {
+func (o *ResponseCheckMultipleSchemaDataInner) GetProductId() int64 {
 	if o == nil || IsNil(o.ProductId.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.ProductId.Get()
@@ -141,7 +141,7 @@ func (o *ResponseCheckMultipleSchemaDataInner) GetProductId() int32 {
 // GetProductIdOk returns a tuple with the ProductId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *ResponseCheckMultipleSchemaDataInner) GetProductIdOk() (*int32, bool) {
+func (o *ResponseCheckMultipleSchemaDataInner) GetProductIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -157,8 +157,8 @@ func (o *ResponseCheckMultipleSchemaDataInner) HasProductId() bool {
 	return false
 }
 
-// SetProductId gets a reference to the given NullableInt32 and assigns it to the ProductId field.
-func (o *ResponseCheckMultipleSchemaDataInner) SetProductId(v int32) {
+// SetProductId gets a reference to the given NullableInt64 and assigns it to the ProductId field.
+func (o *ResponseCheckMultipleSchemaDataInner) SetProductId(v int64) {
 	o.ProductId.Set(&v)
 }
 // SetProductIdNil sets the value for ProductId to be an explicit nil
@@ -172,9 +172,9 @@ func (o *ResponseCheckMultipleSchemaDataInner) UnsetProductId() {
 }
 
 // GetState returns the State field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *ResponseCheckMultipleSchemaDataInner) GetState() int32 {
+func (o *ResponseCheckMultipleSchemaDataInner) GetState() int64 {
 	if o == nil || IsNil(o.State.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.State.Get()
@@ -183,7 +183,7 @@ func (o *ResponseCheckMultipleSchemaDataInner) GetState() int32 {
 // GetStateOk returns a tuple with the State field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *ResponseCheckMultipleSchemaDataInner) GetStateOk() (*int32, bool) {
+func (o *ResponseCheckMultipleSchemaDataInner) GetStateOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -199,8 +199,8 @@ func (o *ResponseCheckMultipleSchemaDataInner) HasState() bool {
 	return false
 }
 
-// SetState gets a reference to the given NullableInt32 and assigns it to the State field.
-func (o *ResponseCheckMultipleSchemaDataInner) SetState(v int32) {
+// SetState gets a reference to the given NullableInt64 and assigns it to the State field.
+func (o *ResponseCheckMultipleSchemaDataInner) SetState(v int64) {
 	o.State.Set(&v)
 }
 // SetStateNil sets the value for State to be an explicit nil

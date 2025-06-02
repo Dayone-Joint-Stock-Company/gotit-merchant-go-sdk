@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **Pin** | Pointer to **string** | Store pin | [optional] 
 **Codes** | Pointer to **[]string** | Array of 10-16 characters Got It voucher codes | [optional] 
 **BillNumber** | Pointer to **string** | Bill number will apply vouchers | [optional] 
-**TotalBill** | Pointer to **int32** | Total bill amount | [optional] 
+**TotalBill** | Pointer to **int64** | Total bill amount | [optional] 
 **SkipReservedWhenMarkUsed** | Pointer to **bool** | When true the system will execute the flow without reserve | [optional] 
 **SkusInfo** | Pointer to [**[]RequestCheckMultipleBodySchemaSkusInfoInner**](RequestCheckMultipleBodySchemaSkusInfoInner.md) | SKU information in bill_number | [optional] 
 
@@ -107,20 +107,20 @@ HasBillNumber returns a boolean if a field has been set.
 
 ### GetTotalBill
 
-`func (o *RequestMarkUseMultipleBodySchema) GetTotalBill() int32`
+`func (o *RequestMarkUseMultipleBodySchema) GetTotalBill() int64`
 
 GetTotalBill returns the TotalBill field if non-nil, zero value otherwise.
 
 ### GetTotalBillOk
 
-`func (o *RequestMarkUseMultipleBodySchema) GetTotalBillOk() (*int32, bool)`
+`func (o *RequestMarkUseMultipleBodySchema) GetTotalBillOk() (*int64, bool)`
 
 GetTotalBillOk returns a tuple with the TotalBill field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTotalBill
 
-`func (o *RequestMarkUseMultipleBodySchema) SetTotalBill(v int32)`
+`func (o *RequestMarkUseMultipleBodySchema) SetTotalBill(v int64)`
 
 SetTotalBill sets TotalBill field to given value.
 

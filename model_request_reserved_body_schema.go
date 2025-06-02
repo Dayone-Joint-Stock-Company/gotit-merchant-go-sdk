@@ -27,7 +27,7 @@ type RequestReservedBodySchema struct {
 	// Bill number will apply vouchers
 	BillNumber *string `json:"bill_number,omitempty"`
 	// Total bill amount
-	TotalBill *int32 `json:"total_bill,omitempty"`
+	TotalBill *int64 `json:"total_bill,omitempty"`
 	// Bill creation time. Format: YYYY-MM-DD HH:MM:SS
 	BillCreatedAt *string `json:"bill_created_at,omitempty"`
 	// SKU information in bill_number
@@ -148,9 +148,9 @@ func (o *RequestReservedBodySchema) SetBillNumber(v string) {
 }
 
 // GetTotalBill returns the TotalBill field value if set, zero value otherwise.
-func (o *RequestReservedBodySchema) GetTotalBill() int32 {
+func (o *RequestReservedBodySchema) GetTotalBill() int64 {
 	if o == nil || IsNil(o.TotalBill) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.TotalBill
@@ -158,7 +158,7 @@ func (o *RequestReservedBodySchema) GetTotalBill() int32 {
 
 // GetTotalBillOk returns a tuple with the TotalBill field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *RequestReservedBodySchema) GetTotalBillOk() (*int32, bool) {
+func (o *RequestReservedBodySchema) GetTotalBillOk() (*int64, bool) {
 	if o == nil || IsNil(o.TotalBill) {
 		return nil, false
 	}
@@ -174,8 +174,8 @@ func (o *RequestReservedBodySchema) HasTotalBill() bool {
 	return false
 }
 
-// SetTotalBill gets a reference to the given int32 and assigns it to the TotalBill field.
-func (o *RequestReservedBodySchema) SetTotalBill(v int32) {
+// SetTotalBill gets a reference to the given int64 and assigns it to the TotalBill field.
+func (o *RequestReservedBodySchema) SetTotalBill(v int64) {
 	o.TotalBill = &v
 }
 

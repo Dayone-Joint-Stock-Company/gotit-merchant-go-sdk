@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **RedeemSkuCodes** | Pointer to [**[]ResponseCheckMultipleSchemaDataInnerRedemptionsRedeemSkuCodesInner**](ResponseCheckMultipleSchemaDataInnerRedemptionsRedeemSkuCodesInner.md) | Contains redeemed SKU information of the voucher (for voucher type is conditional and support sku) | [optional] 
-**RedemptionValue** | Pointer to **int32** | Actual redemption value of voucher type &#x3D; conditional | [optional] 
+**RedemptionValue** | Pointer to **int64** | Actual redemption value of voucher type &#x3D; conditional | [optional] 
 **UsedStore** | Pointer to [**ResponseCheckMultipleSchemaDataInnerRedemptionsUsedStore**](ResponseCheckMultipleSchemaDataInnerRedemptionsUsedStore.md) |  | [optional] 
 **UsedDate** | Pointer to **string** | Date voucher marked as used in case the voucher has been redeemed. Format (YYYY-MM-DD HH:MM:SS) | [optional] 
 
@@ -55,20 +55,20 @@ HasRedeemSkuCodes returns a boolean if a field has been set.
 
 ### GetRedemptionValue
 
-`func (o *ResponseMarkUseMultipleSchemaDataInnerRedemptions) GetRedemptionValue() int32`
+`func (o *ResponseMarkUseMultipleSchemaDataInnerRedemptions) GetRedemptionValue() int64`
 
 GetRedemptionValue returns the RedemptionValue field if non-nil, zero value otherwise.
 
 ### GetRedemptionValueOk
 
-`func (o *ResponseMarkUseMultipleSchemaDataInnerRedemptions) GetRedemptionValueOk() (*int32, bool)`
+`func (o *ResponseMarkUseMultipleSchemaDataInnerRedemptions) GetRedemptionValueOk() (*int64, bool)`
 
 GetRedemptionValueOk returns a tuple with the RedemptionValue field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRedemptionValue
 
-`func (o *ResponseMarkUseMultipleSchemaDataInnerRedemptions) SetRedemptionValue(v int32)`
+`func (o *ResponseMarkUseMultipleSchemaDataInnerRedemptions) SetRedemptionValue(v int64)`
 
 SetRedemptionValue sets RedemptionValue field to given value.
 

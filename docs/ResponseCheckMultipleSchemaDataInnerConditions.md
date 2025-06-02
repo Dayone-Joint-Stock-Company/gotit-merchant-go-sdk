@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **StartDate** | Pointer to **string** | Promo start date (YYYY-MM-DD) | [optional] 
 **ExcludeSpecificDate** | Pointer to **[]string** | Promo non-effective dates (YYYY-MM-DD) | [optional] 
 **ExcludeRecurringDay** | Pointer to **[]string** | Promo non-effective day of week | [optional] 
+**OrderValue** | Pointer to **NullableInt64** | Order value of voucher type &#x3D; conditional | [optional] 
 **RedeemableSkus** | Pointer to **[]string** | List of redeemable SKUs of the voucher code. For voucher type &#x3D; conditional, bill number must contain at least 1 redeemable SKU of the voucher. | [optional] 
 
 ## Methods
@@ -103,6 +104,41 @@ SetExcludeRecurringDay sets ExcludeRecurringDay field to given value.
 
 HasExcludeRecurringDay returns a boolean if a field has been set.
 
+### GetOrderValue
+
+`func (o *ResponseCheckMultipleSchemaDataInnerConditions) GetOrderValue() int64`
+
+GetOrderValue returns the OrderValue field if non-nil, zero value otherwise.
+
+### GetOrderValueOk
+
+`func (o *ResponseCheckMultipleSchemaDataInnerConditions) GetOrderValueOk() (*int64, bool)`
+
+GetOrderValueOk returns a tuple with the OrderValue field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetOrderValue
+
+`func (o *ResponseCheckMultipleSchemaDataInnerConditions) SetOrderValue(v int64)`
+
+SetOrderValue sets OrderValue field to given value.
+
+### HasOrderValue
+
+`func (o *ResponseCheckMultipleSchemaDataInnerConditions) HasOrderValue() bool`
+
+HasOrderValue returns a boolean if a field has been set.
+
+### SetOrderValueNil
+
+`func (o *ResponseCheckMultipleSchemaDataInnerConditions) SetOrderValueNil(b bool)`
+
+ SetOrderValueNil sets the value for OrderValue to be an explicit nil
+
+### UnsetOrderValue
+`func (o *ResponseCheckMultipleSchemaDataInnerConditions) UnsetOrderValue()`
+
+UnsetOrderValue ensures that no value is present for OrderValue, not even an explicit nil
 ### GetRedeemableSkus
 
 `func (o *ResponseCheckMultipleSchemaDataInnerConditions) GetRedeemableSkus() []string`

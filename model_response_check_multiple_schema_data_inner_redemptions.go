@@ -23,7 +23,7 @@ type ResponseCheckMultipleSchemaDataInnerRedemptions struct {
 	// Contains redeemed SKU information of the voucher (for voucher type is conditional and support sku)
 	RedeemSkuCodes []ResponseCheckMultipleSchemaDataInnerRedemptionsRedeemSkuCodesInner `json:"redeem_sku_codes,omitempty"`
 	// Actual redemption value of voucher type = conditional
-	RedemptionValue *int32 `json:"redemption_value,omitempty"`
+	RedemptionValue *int64 `json:"redemption_value,omitempty"`
 	UsedStore *ResponseCheckMultipleSchemaDataInnerRedemptionsUsedStore `json:"used_store,omitempty"`
 	// Date voucher marked as used in case the voucher has been redeemed. Format (YYYY-MM-DD HH:MM:SS)
 	UsedDate *string `json:"used_date,omitempty"`
@@ -81,9 +81,9 @@ func (o *ResponseCheckMultipleSchemaDataInnerRedemptions) SetRedeemSkuCodes(v []
 }
 
 // GetRedemptionValue returns the RedemptionValue field value if set, zero value otherwise.
-func (o *ResponseCheckMultipleSchemaDataInnerRedemptions) GetRedemptionValue() int32 {
+func (o *ResponseCheckMultipleSchemaDataInnerRedemptions) GetRedemptionValue() int64 {
 	if o == nil || IsNil(o.RedemptionValue) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.RedemptionValue
@@ -91,7 +91,7 @@ func (o *ResponseCheckMultipleSchemaDataInnerRedemptions) GetRedemptionValue() i
 
 // GetRedemptionValueOk returns a tuple with the RedemptionValue field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ResponseCheckMultipleSchemaDataInnerRedemptions) GetRedemptionValueOk() (*int32, bool) {
+func (o *ResponseCheckMultipleSchemaDataInnerRedemptions) GetRedemptionValueOk() (*int64, bool) {
 	if o == nil || IsNil(o.RedemptionValue) {
 		return nil, false
 	}
@@ -107,8 +107,8 @@ func (o *ResponseCheckMultipleSchemaDataInnerRedemptions) HasRedemptionValue() b
 	return false
 }
 
-// SetRedemptionValue gets a reference to the given int32 and assigns it to the RedemptionValue field.
-func (o *ResponseCheckMultipleSchemaDataInnerRedemptions) SetRedemptionValue(v int32) {
+// SetRedemptionValue gets a reference to the given int64 and assigns it to the RedemptionValue field.
+func (o *ResponseCheckMultipleSchemaDataInnerRedemptions) SetRedemptionValue(v int64) {
 	o.RedemptionValue = &v
 }
 
