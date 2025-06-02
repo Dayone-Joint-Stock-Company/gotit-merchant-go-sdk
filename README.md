@@ -17,7 +17,7 @@ go get golang.org/x/net/context
 Put the package under your project folder and add the following in import:
 
 ```go
-import gotit_merchant_apis "github.com/Dayone-Joint-Stock-Company/gotit-merchant-go-sdk/v1.0.0"
+import gotit_merchant_api "github.com/Dayone-Joint-Stock-Company/gotit-merchant-go-sdk/v1.0.0"
 ```
 
 To use a proxy, set the environment variable `HTTP_PROXY`:

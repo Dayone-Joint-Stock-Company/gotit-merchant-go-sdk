@@ -1,4 +1,4 @@
-package gotit_merchant_apis_test
+package gotit_merchant_api_test
 
 import (
     "context"
